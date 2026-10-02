@@ -1,12 +1,22 @@
-<!DOCTYPE html>
+import sys
+
+with open('index.html', 'r', encoding='utf-8') as f:
+    idx_content = f.read()
+
+# Extract Tailwind config from index.html
+start_tw = idx_content.find('<script src="https://cdn.tailwindcss.com"></script>')
+end_tw = idx_content.find('</script>', start_tw + 50) + 9
+tailwind_script = idx_content[start_tw:end_tw]
+
+new_gracias = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M3RSPCSP');</script>
+    }})(window,document,'script','dataLayer','GTM-M3RSPCSP');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,29 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        karu: {
-                            verde: '#2C3E2D',  /* Primary: Dark Green */
-                            arena: '#D4A843',  /* Secondary: Gold */
-                            claro: '#FAF6ED',  /* Background Light */
-                            marfil: '#ffffff', /* White */
-                            piedra: '#5e6b7e'  /* Muted Text */
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    {tailwind_script}
 </head>
 <body class="font-sans text-gray-800 bg-karu-claro antialiased flex flex-col min-h-screen">
     <!-- Google Tag Manager (noscript) -->
@@ -93,3 +81,9 @@
     </footer>
 </body>
 </html>
+"""
+
+with open('gracias.html', 'w', encoding='utf-8') as f:
+    f.write(new_gracias)
+
+print('gracias.html updated')
