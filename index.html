@@ -732,6 +732,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 // Construir formData y agregar parámetros UTM / tracking
                 const formData = new FormData(form);
+
+                // Evitar que Google Sheets interprete el signo + del celular como una fórmula
+                if (formData.has('celular')) {
+                    const cel = formData.get('celular');
+                    if (cel.trim().startsWith('+')) {
+                        formData.set('celular', "'" + cel.trim());
+                    }
+                }
+
                 const urlParams = new URLSearchParams(window.location.search);
                 
                 if (urlParams.has('utm_source')) formData.append('UTM Source', urlParams.get('utm_source'));
