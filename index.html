@@ -743,17 +743,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 const urlParams = new URLSearchParams(window.location.search);
                 
-                if (urlParams.has('utm_source')) formData.append('UTM Source', urlParams.get('utm_source'));
-                if (urlParams.has('utm_medium')) formData.append('UTM Medium', urlParams.get('utm_medium'));
-                if (urlParams.has('utm_campaign')) formData.append('UTM Campaign', urlParams.get('utm_campaign'));
-                if (urlParams.has('utm_content')) formData.append('UTM Content', urlParams.get('utm_content'));
-                if (urlParams.has('utm_term')) formData.append('UTM Term', urlParams.get('utm_term'));
+                // Variaciones UTM
+                const utms = ['source', 'medium', 'campaign', 'content', 'term'];
+                utms.forEach(utm => {
+                    if (urlParams.has('utm_' + utm)) {
+                        formData.append('UTM ' + utm.charAt(0).toUpperCase() + utm.slice(1), urlParams.get('utm_' + utm));
+                        formData.append('utm_' + utm, urlParams.get('utm_' + utm));
+                    }
+                });
                 
-                if (urlParams.has('gclid')) formData.append('ID clic (GCLID / FBCLID)', urlParams.get('gclid'));
-                if (urlParams.has('fbclid')) formData.append('ID clic (GCLID / FBCLID)', urlParams.get('fbclid'));
+                if (urlParams.has('gclid')) {
+                    formData.append('ID clic (GCLID / FBCLID)', urlParams.get('gclid'));
+                    formData.append('id_clic', urlParams.get('gclid'));
+                    formData.append('gclid', urlParams.get('gclid'));
+                }
+                if (urlParams.has('fbclid')) {
+                    formData.append('ID clic (GCLID / FBCLID)', urlParams.get('fbclid'));
+                    formData.append('id_clic', urlParams.get('fbclid'));
+                    formData.append('fbclid', urlParams.get('fbclid'));
+                }
                 
-                formData.append('URL / Landing de origen', window.location.href.split('?')[0]);
+                const currentUrl = window.location.href.split('?')[0];
+                formData.append('URL / Landing de origen', currentUrl);
+                formData.append('url_origen', currentUrl);
+                formData.append('url', currentUrl);
+                
                 formData.append('Fuente del lead', 'Form - Hábitat Suramérica');
+                formData.append('fuente', 'Form - Hábitat Suramérica');
+                formData.append('fuente_lead', 'Form - Hábitat Suramérica');
+                
                 formData.append('sheet_name', 'Leads General');
 
                 fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
