@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hábitat Senior Living - Cuidado de Lujo</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        karu: {
+                            verde: '#2C3E2D',  /* Primary: Dark Green */
+                            arena: '#D4A843',  /* Secondary: Gold */
+                            claro: '#FAF6ED',  /* Background Light */
+                            marfil: '#ffffff', /* White */
+                            piedra: '#5e6b7e'  /* Muted Text */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados para el Hero Slider */
+        .swiper-hero {
+            width: 100%;
+            height: 50vh;
+            position: relative;
+            z-index: 0;
+        }
+        @media (min-width: 768px) {
+            .swiper-hero {
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        @keyframes panRight {
+            0% { transform: scale(1.1) translateX(-1.5%); }
+            100% { transform: scale(1.1) translateX(1.5%); }
+        }
+        .swiper-hero .swiper-slide {
+            overflow: hidden;
+        }
+        .swiper-hero .hero-bg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: panRight 12s linear infinite alternate;
+        }
+        @keyframes panRightFlipped {
+            0% { transform: scaleX(-1.1) scaleY(1.1) translateX(1.5%); }
+            100% { transform: scaleX(-1.1) scaleY(1.1) translateX(-1.5%); }
+        }
+        .swiper-hero .hero-bg-flipped {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: panRightFlipped 12s linear infinite alternate;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: auto;
+        }
+        @media (min-width: 768px) {
+            .hero-content {
+                height: 100vh;
+            }
+        }
+        /* Galería */
+        .swiper-gallery {
+            width: 100%;
+            height: 500px;
+        }
+        .swiper-gallery .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WFSQ859');</script>
+<!-- End Google Tag Manager -->
+
+    <link rel="icon" type="image/png" href="habitat_favicon.png">
+</head>
+<body class="font-sans text-gray-800 bg-karu-claro antialiased flex flex-col min-h-screen">
+
+
+<main class="flex-grow pt-32 pb-24 px-6">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-xl">
+        <h1 class="text-3xl md:text-4xl font-serif text-karu-verde mb-8 text-center">Política de Protección de Datos</h1>
+        <div class="prose max-w-none text-gray-700 leading-relaxed space-y-4">
+            
+<h3 class="wp-block-heading"><strong>POLÍTICA DE PROTECCIÓN DE DATOS HÁBITAT ADULTO MAYOR</strong><br><strong>S.A.</strong></h3>
+
+
+
+<p>Hábitat Adulto Mayor S.A., en adelante Hábitat, dando cumplimiento a lo establecido en la Ley Estatutaria 1581 de 2012 y en el Decreto 1074 de 2015, adopta la presente Política de Protección de Datos Personales, con el propósito de proteger la información obtenida de sus accionistas, proveedores, empleados, usuarios, residentes, y cualquier otra persona natural que tenga contacto con Hábitat, para garantizar el ejercicio de sus derechos.</p>
+
+
+
+<p>El objetivo del presente documento es establecer los procedimientos necesarios para el manejo de los datos de carácter personal contenidos en las bases de datos de Hábitat, ya sean digitales o físicas, las cuales serán inscritas en el Registro Nacional de Bases de Datos.</p>
+
+
+
+<p>Hábitat garantiza los derechos de la privacidad, la intimidad, la honra y el buen nombre, en el tratamiento de los datos personales que recolecte, y en consecuencia todas sus actuaciones se regirán por los principios de legalidad, finalidad, libertad, veracidad o calidad, transparencia, acceso y circulación restringida, y seguridad.</p>
+
+
+
+<p>Toda la información que haya sido suministrada por personas naturales, en desarrollo de las diferentes actividades que adelanta Hábitat, o la información obtenida a través de otras entidades vinculadas que comparten datos personales, se regirá bajo estos principios, y sus titulares podrán conocerla, actualizarla y rectificarla, de acuerdo con lo establecido en la presente política.</p>
+
+
+
+<p>La Política de Protección de Datos de Hábitat se divulgará a todos sus empleados, se velará por la apropiación de la misma y se actualizará de acuerdo con cambios organizacionales, disposiciones legales u otros aspectos que puedan afectar lo aquí descrito. Así mismo, se publicará en todos los medios de contacto por los cuales Hábitat recolecta datos personales, garantizando que sus grupos de interés conozcan claramente los derechos que tienen con relación al tratamiento de su información.</p>
+
+
+
+<p>En esta política se detalla la siguiente información:</p>
+
+
+
+<ol class="wp-block-list"><li>&nbsp;Marco normativo.</li><li>Principios rectores del tratamiento de datos personales.</li><li>Consentimiento para el tratamiento de datos personales.</li><li>Ejercicio de los derechos sobre los datos personales.</li><li>Información que se recolecta y almacena de los accionistas, proveedores, empleados, usuarios, residentes y cualquier otra persona natural que tenga contacto con Hábitat.</li><li>Tratamiento de datos sensibles.</li><li>Finalidad con la que se hace tratamiento de la información personal de los titulares.</li><li>Transmisión internacional de datos personales.</li><li>Entrega de información personal a proveedores de servicios.</li><li>Preferencias para el envío de información relacionada con Hábitat.</li><li>Vigencia para el tratamiento de los datos.</li><li>Modificaciones de la Política de Protección de Datos Personales. Anexo: Definiciones.</li></ol>
+
+
+
+<h3 class="wp-block-heading"><strong>1. Marco normativo</strong></h3>
+
+
+
+<p>La Constitución Colombiana estableció en su art. 15 que “todas las personas tienen derecho a su intimidad personal y familiar y a su buen nombre, y el Estado debe respetarlos y hacerlos respetar. De igual modo, tienen derecho a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bancos de datos y en archivos de entidades públicas y privadas.</p>
+            
+        </div>
+    </div>
+</main>
+
+<footer class="bg-karu-verde text-karu-marfil py-8 px-6 md:px-12 w-full relative z-20">
+        <div class="w-full flex items-center justify-center">
+            <div class="text-sm text-gray-200 opacity-90 text-center">
+                &copy; 2026 Hábitat Suramérica. Todos los derechos reservados. | <a href="politica-de-privacidad.html" class="underline hover:text-white transition">Política de tratamiento de datos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Formulario -->
+    <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm px-4">
+        <div class="bg-white text-karu-verde p-10 md:p-14 shadow-2xl relative w-full max-w-lg transform scale-95 transition-transform duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-6 text-gray-400 hover:text-karu-verde transition text-4xl">&times;</button>
+            <h3 class="text-3xl font-serif mb-2">Solicita Información</h3>
+            <p class="text-sm text-karu-verde opacity-80 mb-8">Déjenos sus datos y un asesor se pondrá en contacto para brindarle información sobre nuestros planes.</p>
+            <form id="form-inline" action="gracias.html" class="space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-bold mb-2">Nombre completo</label>
+                    <input type="text" class="w-full border-b border-karu-piedra py-3 focus:outline-none focus:border-karu-verde bg-transparent text-karu-verde" placeholder="Ej. Juan Pérez" name="nombre" required>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-bold mb-2">Correo electrónico</label>
+                    <input type="email" class="w-full border-b border-karu-piedra py-3 focus:outline-none focus:border-karu-verde bg-transparent text-karu-verde" placeholder="juan@correo.com" name="email" required>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-bold mb-2">Teléfono</label>
+                    <input type="tel" class="w-full border-b border-karu-piedra py-3 focus:outline-none focus:border-karu-verde bg-transparent text-karu-verde" placeholder="+57 300 000 0000" name="celular" required>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-bold mb-2">Sede de interés</label>
+                    <select class="w-full border-b border-karu-piedra py-3 focus:outline-none focus:border-karu-verde bg-transparent text-karu-verde" name="para_quien" required>
+                        <option value="" disabled selected>Selecciona una sede</option>
+                        <option value="Bernal">Bernal — desde $8.500.000</option>
+                        <option value="Balsos">Balsos — desde $12.300.000</option>
+                        <option value="Suramerica">Suramérica — desde $12.800.000</option>
+                    </select>
+                </div>
+                <div class="flex items-start gap-2 pt-2">
+                    <input type="checkbox" id="privacy-modal" name="datos" value="Sí" class="mt-0.5 accent-karu-verde" required>
+                    <label for="privacy-modal" class="text-[11px] text-gray-500 leading-tight">
+                        Acepto la <a href="politica-de-privacidad.html" target="_blank" class="underline hover:text-karu-verde">política de tratamiento de datos</a>
+                    </label>
+                </div>
+                <button type="submit" class="w-full bg-karu-verde text-white py-4 mt-6 uppercase tracking-widest text-sm hover:bg-karu-arena transition duration-300">Enviar</button>
+                <div class="mt-6 text-center border-t border-gray-200 pt-4">
+                    <p class="text-sm font-bold text-karu-verde uppercase tracking-wide">
+                        ¿Prefieres hablar ahora?<br>
+                        <a href="tel:+573206872012" class="inline-block mt-2 text-karu-arena hover:text-karu-verde transition duration-300">Llámanos: +57 320 6872012</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializar Swiper para el Hero
+        const swiperHero = new Swiper('.swiper-hero', {
+            loop: true,
+            effect: 'fade',
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Inicializar Swiper para la Galería (Paso foto por foto)
+        const swiperGallery = new Swiper('.swiper-gallery', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 1000,
+            allowTouchMove: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+
+        // Lógica del Modal
+        const modal = document.getElementById('contactModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        function openModal(e) {
+            if(e) e.preventDefault();
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+        }
+        
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.add('scale-95');
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+
+    <!-- Google Sheets Form Submission -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxlEJsLWK4WG6XLPfjpw80w9jnu2CoqrVaUmlCicyrtCnUn3htn4BQCd5lBKYdushMuCg/exec';
+        const forms = document.querySelectorAll('form');
+
+        forms.forEach(form => {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                
+                // Change button text to indicate loading
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Enviando...';
+                btn.disabled = true;
+
+                // Construir formData y agregar parámetros UTM / tracking
+                const formData = new FormData(form);
+
+                // Evitar que Google Sheets interprete el signo + del celular como una fórmula
+                if (formData.has('celular')) {
+                    const cel = formData.get('celular');
+                    if (cel.trim().startsWith('+')) {
+                        formData.set('celular', "'" + cel.trim());
+                    }
+                }
+
+                const urlParams = new URLSearchParams(window.location.search);
+                
+                if (urlParams.has('utm_source')) formData.append('UTM Source', urlParams.get('utm_source'));
+                if (urlParams.has('utm_medium')) formData.append('UTM Medium', urlParams.get('utm_medium'));
+                if (urlParams.has('utm_campaign')) formData.append('UTM Campaign', urlParams.get('utm_campaign'));
+                if (urlParams.has('utm_content')) formData.append('UTM Content', urlParams.get('utm_content'));
+                if (urlParams.has('utm_term')) formData.append('UTM Term', urlParams.get('utm_term'));
+                
+                if (urlParams.has('gclid')) formData.append('ID clic (GCLID / FBCLID)', urlParams.get('gclid'));
+                if (urlParams.has('fbclid')) formData.append('ID clic (GCLID / FBCLID)', urlParams.get('fbclid'));
+                
+                formData.append('URL / Landing de origen', window.location.href.split('?')[0]);
+                formData.append('Fuente del lead', 'Form - Hábitat Suramérica');
+                formData.append('sheet_name', 'Leads General');
+
+                fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+                    .then(response => {
+                        setTimeout(() => { window.location.href = form.getAttribute('action'); }, 800);
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        alert('Hubo un error enviando el formulario. Por favor intenta de nuevo.');
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
